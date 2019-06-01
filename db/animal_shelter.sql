@@ -8,7 +8,7 @@ CREATE TABLE animals (
   animal_type VARCHAR(255),
   breed VARCHAR(255),
   age SERIAL2,
-  admission DATE
+  admission_date DATE
 );
 
 CREATE TABLE owners (
