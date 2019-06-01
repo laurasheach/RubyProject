@@ -21,6 +21,12 @@ owner2 = Owner.new({
   })
 owner2.save()
 
+# find_owner = Owner.find(2)
+
+# owner1.first_name = "Alastair"
+# owner1.update()
+
+# owner2.delete()
 
 animal1 = Animal.new({
   'name' => 'Bert',
@@ -40,6 +46,12 @@ animal2 = Animal.new({
   })
 animal2.save()
 
+# animal1.age = 5
+# animal1.update()
+
+# animal2.delete()
+
+# find_animal = Animal.find(1)
 
 adoption1 = Adoption.new({
   'adoption_status' => 'Unavailable',
@@ -54,6 +66,18 @@ adoption2 = Adoption.new({
   'animal_id' => animal1.id
   })
 adoption2.save()
+
+# find_adoption = Adoption.find(1)
+
+# adoption2.delete()
+
+adoption2.owner_id = owner1.id
+adoption2.update()
+
+# all_owners = Owner.all()
+# all_animals = Animal.all()
+# all_adoptions = Adoption.all()
+
 
 
 binding.pry
