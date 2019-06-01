@@ -2,7 +2,7 @@ require_relative("../db/sql_runner")
 
 class Animal
 
-  attr_accessor :name, :name, :animal_type, :breed, :age, :admission_date
+  attr_accessor :name, :name, :animal_type, :breed, :age, :admission_date, :adoption_status
   attr_reader :id
 
   def initialize(options)
@@ -12,6 +12,7 @@ class Animal
     @breed = options['breed']
     @age = options['age']
     @admission_date = options['admission_date']
+    @adoption_status = options['adoption_status']
   end
 
   def save()
@@ -21,14 +22,15 @@ class Animal
       animal_type,
       breed,
       age,
-      admission_date
+      admission_date,
+      adoption_status
     )
     VALUES
     (
-      $1, $2, $3, $4, $5
+      $1, $2, $3, $4, $5, $6
     )
     RETURNING id"
-    values = [@name, @animal_type, @breed, @age, @admission_date]
+    values = [@name, @animal_type, @breed, @age, @admission_date, @adoption_status]
     results = SqlRunner.run(sql, values)
     @id = results[0]['id'].to_i
   end
@@ -41,13 +43,14 @@ class Animal
       animal_type,
       breed,
       age,
-      admission_date
+      admission_date,
+      adoption_status
       ) =
       (
-        $1, $2, $3, $4, $5
+        $1, $2, $3, $4, $5, $6
       )
-      WHERE id = $6"
-      values = [@name, @animal_type, @breed, @age, @admission_date, @id]
+      WHERE id = $7"
+      values = [@name, @animal_type, @breed, @age, @admission_date, @adoption_status, @id]
       SqlRunner.run(sql, values)
   end
 

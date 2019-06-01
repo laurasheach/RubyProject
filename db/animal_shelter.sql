@@ -16,12 +16,12 @@ CREATE TABLE animals (
   animal_type VARCHAR(255),
   breed VARCHAR(255),
   age INT,
-  admission_date DATE
+  admission_date DATE,
+  adoption_status VARCHAR(255)
 );
 
 CREATE TABLE adoptions (
   id SERIAL8 PRIMARY KEY,
-  adoption_status VARCHAR(255),
   owner_id INT8 REFERENCES owners(id) ON DELETE CASCADE,
   animal_id INT8 REFERENCES animals(id) ON DELETE CASCADE
 );

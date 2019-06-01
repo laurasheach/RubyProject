@@ -2,12 +2,11 @@ require_relative("../db/sql_runner")
 
 class Adoption
 
-  attr_accessor :adoption_status, :owner_id, :animal_id
+  attr_accessor :owner_id, :animal_id
   attr_reader :id
 
   def initialize(options)
     @id = options['id'].to_i if options['id']
-    @adoption_status = options['adoption_status']
     @owner_id = options['owner_id'].to_i
     @animal_id = options['animal_id'].to_i
   end
@@ -15,16 +14,15 @@ class Adoption
   def save()
     sql = "INSERT INTO adoptions
     (
-      adoption_status,
       owner_id,
       animal_id
     )
     VALUES
     (
-      $1, $2, $3
+      $1, $2
     )
     RETURNING id"
-    values = [@adoption_status, @owner_id, @animal_id]
+    values = [@owner_id, @animal_id]
     results = SqlRunner.run(sql, values).first()
     @id = results['id'].to_i
   end
@@ -33,15 +31,14 @@ class Adoption
     sql = "UPDATE adoptions
     SET
     (
-      adoption_status,
       owner_id,
       animal_id
     ) =
     (
-      $1, $2, $3
+      $1, $2
     )
-      WHERE id = $4"
-    values = [@adoption_status, @owner_id, @animal_id, @id]
+      WHERE id = $3"
+    values = [@owner_id, @animal_id, @id]
     SqlRunner.run(sql, values)
   end
 
