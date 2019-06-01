@@ -2,7 +2,7 @@ require_relative("../db/sql_runner")
 
 class Animal
 
-  attr_accessor :name, :name, :animal_type, :breed, :age, :admission_date 
+  attr_accessor :name, :name, :animal_type, :breed, :age, :admission_date
   attr_reader :id
 
   def initialize(options)
@@ -56,6 +56,13 @@ class Animal
     WHERE id = $1"
     values = [@id]
     SqlRunner.run(sql, values)
+  end
+
+  def animals_by_admission_date()
+    sql = "SELECT * FROM animals
+    ORDER BY admission_date"
+    results = SqlRunner.run(sql)
+    return results.map {|animal| Animal.new(animal)}
   end
 
   def self.all()

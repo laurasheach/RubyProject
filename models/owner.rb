@@ -46,6 +46,17 @@ class Owner
     SqlRunner.run(sql, values)
   end
 
+  def owners_with_animals()
+    sql = "SELECT owners.first_name, owners.last_name, animals.name FROM owners
+    INNER JOIN adoptions
+    ON adoptions.owner_id = owners.id
+    INNER JOIN animals
+    ON animals.id = adoptions.animal_id"
+    values = []
+    result = SqlRunner.run(sql, values)
+    return result.map {|owner| Owner.new(owner)}
+  end
+
   def self.all()
     sql = "SELECT * FROM owners"
     results = SqlRunner.run(sql)
