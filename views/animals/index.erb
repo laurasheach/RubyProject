@@ -1,1 +1,26 @@
-<h1>ANIMALS</h1>
+<h1>All Animals</h1>
+
+<table>
+  <tr>
+    <th>Animal id</th>
+    <th>Name</th>
+    <th>Animal Type</th>
+    <th>Breed</th>
+    <th>Age</th>
+    <th>Admission Date</th>
+    <th>Availabilty</th>
+  </tr>
+
+<% for animal in @animals%>
+  <tr>
+    <td><%= animal.id %></td>
+    <td><%= animal.name %></td>
+    <td><%= animal.animal_type %></td>
+    <td><%= animal.breed %></td>
+    <td><%= animal.age %></td>
+    <td><%= animal.admission_date %></td>
+    <td><%= animal.adoption_status %></td>
+  </tr>
+<% end %>
+
+</table>
