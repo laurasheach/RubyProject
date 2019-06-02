@@ -31,3 +31,11 @@ get '/animals/:id' do
   @animal = Animal.find(params[:id])
   erb(:"animals/show")
 end
+
+# Delete an animal from the database
+
+post '/animals/:id/delete' do
+  delete_animal = Animal.find(params[:id])
+  delete_animal.delete()
+  redirect to '/animals'
+end

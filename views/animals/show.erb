@@ -6,3 +6,8 @@
 <p><strong>Age:</strong><%= @animal.age %></p>
 <p><strong>Admission Date:</strong><%= @animal.admission_date %></p>
 <p><strong>Availabilty:</strong><%= @animal.adoption_status %></p>
+
+
+<form action="/animals/<%= @animal.id %>/delete" method="post">
+  <input type="submit" value="Delete Animal">
+</form>
