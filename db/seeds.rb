@@ -37,7 +37,8 @@ animal1 = Animal.new({
   'breed' => 'West Highland Terrier',
   'age' => 6,
   'admission_date' => '2019-06-01',
-  'adoption_status' => 'Unavailable'
+  'adoption_status' => 'Unavailable',
+  'animal_url' => "/public/images/bert.jpg"
   })
 animal1.save()
 
@@ -47,7 +48,8 @@ animal2 = Animal.new({
   'breed' => 'Chinchilla Lanigera',
   'age' => 2,
   'admission_date' => '2019-05-03',
-  'adoption_status' => 'Unavailable'
+  'adoption_status' => 'Unavailable',
+  'animal_url' => 'snuggles.jpg'
   })
 animal2.save()
 
@@ -57,7 +59,8 @@ animal3 = Animal.new({
   'breed' => 'Sphynx',
   'age' => 4,
   'admission_date' => '2019-04-15',
-  'adoption_status' => 'Available'
+  'adoption_status' => 'Available',
+  'animal_url' => 'gary.jpg'
   })
 animal3.save()
 
@@ -67,7 +70,8 @@ animal4 = Animal.new({
   'breed' => 'Mediterranean Spur-thighed',
   'age' => 14,
   'admission_date' => '2019-02-28',
-  'adoption_status' => 'Available'
+  'adoption_status' => 'Available',
+  'animal_url' => 'scoot.jpg'
   })
 animal4.save()
 

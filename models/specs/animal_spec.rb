@@ -11,7 +11,8 @@ class TestAnimal < MiniTest::Test
       "animal_type" => "Dog",
       "breed" => "West Highland Terrier",
       "age" => 6,
-      "admission_date" => "2019-06-01"
+      "admission_date" => "2019-06-01",
+      "animal_url" => "bert.jpg"
     }
 
     @animal1 = Animal.new(options)
@@ -39,6 +40,10 @@ class TestAnimal < MiniTest::Test
 
   def test_admission_date
     assert_equal("2019-06-01", @animal1.admission_date)
+  end
+
+  def test_animal_url
+    assert_equal("bert.jpg", @animal1.animal_url)
   end
 
 end
