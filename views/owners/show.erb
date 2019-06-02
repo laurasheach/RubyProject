@@ -1,0 +1,11 @@
+<p><strong>Name:</strong><%= @owner.full_name %></p>
+<p><strong>Address:</strong><%= @owner.address %></p>
+<p><strong>Animals Adopted:</strong><%=  %></p>
+
+<form action="/owners/<%= @owner.id %>/edit" method="get">
+  <input type="submit" value="Edit Owner">
+</form>
+
+<form action="/owners/<%= @owner.id %>/delete" method="post">
+  <input type="submit" value="Delete Owner">
+</form>

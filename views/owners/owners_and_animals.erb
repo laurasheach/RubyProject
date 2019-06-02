@@ -1,0 +1,9 @@
+<h2>Owner <%= @owner.name %></h2>
+
+<p>Animals:</p>
+
+<ul>
+  <% @owners.animals.each do |animal| %>
+  <li><%= animal.name %></li>
+  <%= end %>
+</ul>
