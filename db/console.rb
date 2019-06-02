@@ -71,8 +71,8 @@ adoption2.save()
 
 # adoption2.delete()
 
-adoption2.owner_id = owner1.id
-adoption2.update()
+# adoption2.owner_id = owner1.id
+# adoption2.update()
 
 # all_owners = Owner.all()
 # all_animals = Animal.all()

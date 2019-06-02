@@ -7,6 +7,9 @@
 <p><strong>Admission Date:</strong><%= @animal.admission_date %></p>
 <p><strong>Availabilty:</strong><%= @animal.adoption_status %></p>
 
+<form action="/animals/<%= @animal.id %>/edit" method="get">
+  <input type="submit" value="Edit Animal">
+</form>
 
 <form action="/animals/<%= @animal.id %>/delete" method="post">
   <input type="submit" value="Delete Animal">
