@@ -1,6 +1,6 @@
 <h1>All Animals</h1>
 
-<table>
+<table class="container">
   <tr>
     <th>Animal id</th>
     <th>Name</th>
@@ -9,6 +9,7 @@
     <th>Age</th>
     <th>Admission Date</th>
     <th>Availabilty</th>
+    <th>Adopted by</th>
     <th></th>
   </tr>
 
@@ -21,6 +22,11 @@
     <td><%= animal.age %></td>
     <td><%= animal.admission_date %></td>
     <td><%= animal.adoption_status %></td>
+    <td>
+      <% for owner in animal.owners %>
+      <%= owner.full_name %>
+      <% end %>
+    </td>
     <td><a href="/animals/<%= animal.id %>">Show Animal</a></td>
   </tr>
 <% end %>

@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+body::after {
+  content: "";
+  background: url('/images/paw_print_across_background.png');
+  opacity: 0.15;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+header {
+  background: #03477F;
+  height: 10vh;
+  width: 100vw;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+nav {
+  background: #078BF7;
+  height: 8vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  color: #FFFFFF;
+}
+
+li {
+  list-style: none;
+  margin: 0 10px;
+  font-size: 15px;
+}
+
+.main {
+  text-align: center;
+}

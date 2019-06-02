@@ -6,6 +6,11 @@
 <p><strong>Age:</strong><%= @animal.age %></p>
 <p><strong>Admission Date:</strong><%= @animal.admission_date %></p>
 <p><strong>Availabilty:</strong><%= @animal.adoption_status %></p>
+<p><strong>Adopted by:</strong>
+  <% for owner in  @animal.owners %>
+  <%= owner.full_name %>
+  <% end %>
+</p>
 
 <form action="/animals/<%= @animal.id %>/edit" method="get">
   <input type="submit" value="Edit Animal">
