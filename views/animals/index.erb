@@ -9,6 +9,7 @@
     <th>Age</th>
     <th>Admission Date</th>
     <th>Availabilty</th>
+    <th></th>
   </tr>
 
 <% for animal in @animals%>
@@ -20,6 +21,7 @@
     <td><%= animal.age %></td>
     <td><%= animal.admission_date %></td>
     <td><%= animal.adoption_status %></td>
+    <td><a href="/animals/<%= animal.id %>">Show Animal</a></td>
   </tr>
 <% end %>
 
