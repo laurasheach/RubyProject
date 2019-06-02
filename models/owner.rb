@@ -2,23 +2,18 @@ require_relative("../db/sql_runner")
 
 class Owner
 
-  attr_accessor :first_name, :last_name, :address
+  attr_accessor :full_name, :address
   attr_reader :id
 
   def initialize(options)
     @id = options['id'].to_i if options['id']
-    @first_name = options['first_name']
-    @last_name = options['last_name']
+    @full_name = options['full_name']
     @address = options['address']
   end
 
-  def full_name
-    return @first_name + " " + @last_name
-  end
-
   def save()
-    sql = "INSERT INTO owners (first_name, last_name, address) VALUES ($1, $2, $3) RETURNING id"
-    values = [@first_name, @last_name, @address]
+    sql = "INSERT INTO owners (full_name, address) VALUES ($1, $2) RETURNING id"
+    values = [@full_name, @address]
     results = SqlRunner.run(sql, values)
     @id = results[0]['id'].to_i
   end
@@ -27,16 +22,15 @@ class Owner
     sql = "UPDATE owners
     SET
     (
-      first_name,
-      last_name,
+      full_name,
       address
       ) =
       (
-        $1, $2, $3
+        $1, $2
       )
-      WHERE id = $4
+      WHERE id = $3
       "
-      values = [@first_name, @last_name, @address, @id]
+      values = [@full_name, @address, @id]
       SqlRunner.run(sql, values)
   end
 
@@ -47,7 +41,7 @@ class Owner
   end
 
   def animals
-    sql = "SELECT animals.* FROM animals
+    sql = "SELECT animals.name FROM animals
      INNER JOIN adoptions
      ON adoptions.animal_id = animals.id
      WHERE owner_id = $1;"

@@ -8,29 +8,25 @@ Animal.delete_all()
 Adoption.delete_all()
 
 owner1 = Owner.new({
-  'first_name' => 'Laura',
-  'last_name' => 'Sheach',
+  'full_name' => 'Laura Sheach',
   'address' => '1 Park Way, Glasgow, G1 2AB'
   })
 owner1.save()
 
 owner2 = Owner.new({
-  'first_name' => 'Harris',
-  'last_name' => 'McFarlane',
+  'full_name' => 'Harris McFarlane',
   'address' => '2 Old Street, Glasgow, G2 3CD'
   })
 owner2.save()
 
 owner3 = Owner.new({
-  'first_name' => 'Eunice',
-  'last_name' => 'McDonald',
+  'full_name' => 'Eunice McDonald',
   'address' => '3 High Street, Glasgow, G3 4EF'
   })
 owner3.save()
 
 owner4 = Owner.new({
-  'first_name' => 'Billy',
-  'last_name' => 'Ford',
+  'full_name' => 'Billy Ford',
   'address' => '4 Edinburgh Road, Glasgow, G4 5GH'
   })
 owner4.save()

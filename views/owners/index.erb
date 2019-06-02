@@ -3,8 +3,7 @@
 <table>
   <tr>
     <th>Owner id</th>
-    <th>First Name</th>
-    <th>Last Name</th>
+    <th>Full Name</th>
     <th>Address</th>
     <th></th>
   </tr>
@@ -12,8 +11,7 @@
 <% for owner in @owners%>
   <tr>
     <td><%= owner.id %></td>
-    <td><%= owner.first_name %></td>
-    <td><%= owner.last_name %></td>
+    <td><%= owner.full_name %></td>
     <td><%= owner.address %></td>
     <td><a href="/owners/<%= owner.id %>">Show Owner</a></td>
   </tr>

@@ -1,9 +1,6 @@
 <form action="/owners/<%= @owner.id %>" method="post">
-    <label for="first_name">First Name:</label>
-    <input id="first_name" type="text" name="first_name" value="<%= @owner.first_name %>"/>
-
-    <label for="last_name">Last Name:</label>
-    <input id="last_name" type="text" name="last_name" value="<%= @owner.last_name%>"/>
+    <label for="full_name">Full Name:</label>
+    <input id="full_name" type="text" name="full_name" value="<%= @owner.full_name %>"/>
 
     <label for="address">Address:</label>
     <input id="address" type="text" name="address" value="<%= @owner.address%>"/>

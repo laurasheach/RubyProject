@@ -31,6 +31,7 @@ end
 
 get '/owners/:id' do
   @owner = Owner.find(params['id'].to_i)
+  @adoption = Adoption.all
   erb(:"owners/show")
 end
 

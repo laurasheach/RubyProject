@@ -2,16 +2,17 @@
 
 <table>
   <tr>
-    <th>Owner First Name</th>
-    <th>Owner Last name</th>
+    <th>Adoption id</th>
+    <th>Owner Full Name</th>
     <th>Animal Name</th>
   </tr>
 
   <% for adoption in @adoptions %>
   <tr>
-    <td><%= adoption.owner.first_name %></td>
-    <td><%= adoption.owner.last_name %></td>
+    <td><%= adoption.id %></td>
+    <td><%= adoption.owner.full_name %></td>
     <td><%= adoption.animal.name %></td>
+    <td><a href="/adoptions/<%= adoption.id %>">Show Adoption</a></td>
   </tr>
   <% end %>
 

@@ -1,9 +1,10 @@
-<h2>Owner <%= @owner.name %></h2>
+<p><strong>Owner Name:</strong><%= @adoption.owner.full_name %></p>
+<p><strong>Animal Name:</strong><%= @adoption.animal.name %></p>
 
-<p>Animals:</p>
+<form action="/adoptions/<%= @adoption.id %>/edit" method="get">
+  <input type="submit" value="Edit Adoption">
+</form>
 
-<ul>
-  <% @owners.animals.each do |animal| %>
-  <li><%= animal.name %></li>
-  <%= end %>
-</ul>
+<form action="/adoptions/<%= @adoption.id %>/delete" method="post">
+  <input type="submit" value="Delete Adoption">
+</form>
