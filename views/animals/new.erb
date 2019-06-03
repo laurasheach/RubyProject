@@ -1,49 +1,38 @@
 <h1 class="main">Admit an animal to the shelter:</h1>
 <br>
 
-<div class="container">
-  <form action="/animals" method="post">
-    <div>
+  <form class="form" action="/animals" method="post">
       <label for="name">Name:</label>
       <input id="name" type="text" name="name"/>
-    </div>
 
-    <div>
+
       <label for="animal_type">Animal Type:</label>
       <input id="animal_type" type="text" name="animal_type"/>
-    </div>
 
-    <div>
+
+
       <label for="breed">Breed:</label>
       <input id="breed" type="text" name="breed"/>
-    </div>
 
-    <div>
+
+
       <label for="age">Age:</label>
       <input id="age" type="text" name="age"/>
-    </div>
 
-    <div>
+
+
       <label for="admission_date">Admission Date:</label>
       <input id="admission_date" type="date" name="admission_date"/>
-    </div>
 
-    <div>
       <label for="adoption_status">Adoption Status:</label>
       <select id="adoption_status" name="adoption_status">
         <option value="Unavailable" selected="selected">Unavailable</option>
         <option value="Available">Available</option>
       </select>
-    </div>
 
-    <div>
       <label for="animal_url">Photo</label>
       <input type="text" name="animal_url" value="" src="">
-    </div>
 
-    <div>
-      <input type="submit" value="Admit animal"/>
-    </div>
+      <input class="admit-button" type="submit" value="Admit animal"/>
 
   </form>
-</div>

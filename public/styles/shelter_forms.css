@@ -1,0 +1,13 @@
+.form {
+  display: grid;
+  margin-left: 415px;
+  width: 60vw;
+  height: 50vh;
+  grid-template-columns: 10vw 30vw;
+  grid-template-rows: auto;
+  grid-gap: 15px 5px;
+}
+
+.admit-button {
+  grid-column: 2 / span 1;
+}
