@@ -12,7 +12,7 @@
   <% end %>
 </p>
 
-<img src="/bert.jpg" alt="animal picture"/>
+<img src="<%= @animal.animal_url %>" alt="animal picture"/>
 
 <form action="/animals/<%= @animal.id %>/edit" method="get">
   <input type="submit" value="Edit Animal">
@@ -20,4 +20,8 @@
 
 <form action="/animals/<%= @animal.id %>/delete" method="post">
   <input type="submit" value="Delete Animal">
+</form>
+
+<form action="/animals" method="get">
+  <input type="submit" value="Back to all Animals">
 </form>

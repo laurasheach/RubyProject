@@ -38,7 +38,7 @@ animal1 = Animal.new({
   'age' => 6,
   'admission_date' => '2019-06-01',
   'adoption_status' => 'Unavailable',
-  'animal_url' => "https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwjV8PPJxsviAhWvAGMBHWtYAE8QjRx6BAgBEAU&url=https%3A%2F%2Fweheartit.com%2Fentry%2F4654449&psig=AOvVaw1Cf6kLQ5cnmcsv2SvEkYDD&ust=1559590769052815"
+  'animal_url' => '/images/bert.jpg'
   })
 animal1.save()
 
@@ -49,18 +49,18 @@ animal2 = Animal.new({
   'age' => 2,
   'admission_date' => '2019-05-03',
   'adoption_status' => 'Unavailable',
-  'animal_url' => 'snuggles.jpg'
+  'animal_url' => '/images/snuggles.jpg'
   })
 animal2.save()
 
 animal3 = Animal.new({
   'name' => 'Gary',
   'animal_type' => 'Cat',
-  'breed' => 'Sphynx',
+  'breed' => 'Scottish Fold',
   'age' => 4,
   'admission_date' => '2019-04-15',
   'adoption_status' => 'Available',
-  'animal_url' => 'gary.jpg'
+  'animal_url' => '/images/gary.jpg'
   })
 animal3.save()
 
@@ -71,7 +71,7 @@ animal4 = Animal.new({
   'age' => 14,
   'admission_date' => '2019-02-28',
   'adoption_status' => 'Available',
-  'animal_url' => 'scoot.jpg'
+  'animal_url' => '/images/scoot.jpg'
   })
 animal4.save()
 
