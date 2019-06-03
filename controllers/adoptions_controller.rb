@@ -1,6 +1,7 @@
 require( 'sinatra' )
 require( 'sinatra/contrib/all' )
 require( 'pry' )
+require( 'pry-byebug' )
 require_relative( '../models/adoption.rb' )
 require_relative( '../models/owner.rb' )
 require_relative( '../models/animal.rb' )
@@ -24,10 +25,12 @@ end
 # Post adoption to the database
 
 post '/adoptions' do
-  @adoption = Adoption.new(params)
-  @adoption.save()
-  @animal.adoption_status = "Unavailable"
-  @animal.save()
+  adoption = Adoption.new(params)
+  
+  animal = Animal.find(params[:animal_id].to_i)
+  animal.adoption_status = "Unavailable"
+  animal.update()
+  adoption.save()
   erb(:"adoptions/create")
 end
 

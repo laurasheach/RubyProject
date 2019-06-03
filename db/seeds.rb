@@ -38,7 +38,7 @@ animal1 = Animal.new({
   'age' => 6,
   'admission_date' => '2019-06-01',
   'adoption_status' => 'Unavailable',
-  'animal_url' => "/public/images/bert.jpg"
+  'animal_url' => "https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwjV8PPJxsviAhWvAGMBHWtYAE8QjRx6BAgBEAU&url=https%3A%2F%2Fweheartit.com%2Fentry%2F4654449&psig=AOvVaw1Cf6kLQ5cnmcsv2SvEkYDD&ust=1559590769052815"
   })
 animal1.save()
 
