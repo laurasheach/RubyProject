@@ -12,7 +12,7 @@
   <% end %>
 </p>
 
-<img src="<%= @animal.animal_url %>" alt="animal picture"/>
+<img src="<%= @animal.animal_url %>" height="250" alt="animal picture"/>
 
 <form action="/animals/<%= @animal.id %>/edit" method="get">
   <input type="submit" value="Edit Animal">

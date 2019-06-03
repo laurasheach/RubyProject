@@ -52,3 +52,23 @@ li {
 .main {
   text-align: center;
 }
+
+.main-container {
+  display: flex;
+  flex-flow: row wrap;
+  width: 90vw;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(192, 192, 192, 0.5);
+  height: 25vh;
+  width: 25vw;
+  margin: 10px;
+  text-align: center;
+
+}

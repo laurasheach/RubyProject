@@ -1,0 +1,11 @@
+.main-button {
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 2px solid #03477F;
+  border: none;
+  color: #FFFFFF;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+}
