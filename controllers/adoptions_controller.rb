@@ -26,6 +26,8 @@ end
 post '/adoptions' do
   @adoption = Adoption.new(params)
   @adoption.save()
+  @animal.adoption_status = "Unavailable"
+  @animal.save()
   erb(:"adoptions/create")
 end
 
