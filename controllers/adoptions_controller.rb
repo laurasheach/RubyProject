@@ -26,7 +26,6 @@ end
 
 post '/adoptions' do
   adoption = Adoption.new(params)
-  
   animal = Animal.find(params[:animal_id].to_i)
   animal.adoption_status = "Unavailable"
   animal.update()

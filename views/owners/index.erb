@@ -5,6 +5,7 @@
     <th>Owner id</th>
     <th>Full Name</th>
     <th>Address</th>
+    <th>Animals Adopted</th>
     <th></th>
   </tr>
 
@@ -13,6 +14,15 @@
     <td><%= owner.id %></td>
     <td><%= owner.full_name %></td>
     <td><%= owner.address %></td>
+    <td>
+      <ul>
+      <% for animal in  owner.animals %>
+      <li>
+      <%= animal.name %>
+      </li>
+      <% end %>
+    </ul>
+  </td>
     <td><a href="/owners/<%= owner.id %>">Show Owner</a></td>
   </tr>
 <% end %>

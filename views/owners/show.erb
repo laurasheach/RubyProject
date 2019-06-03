@@ -2,13 +2,11 @@
 <p><strong>Address:</strong><%= @owner.address %></p>
 <p><strong>Animals Adopted:</strong>
   <ul>
-
-      <% for animal in  @owner.animals %>
-      <li>
-      <%= animal.name %>
-      </li>
-      <% end %>
-
+    <% for animal in  @owner.animals %>
+    <li>
+    <%= animal.name %>
+    </li>
+    <% end %>
   </ul>
 </p>
 
