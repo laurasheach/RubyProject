@@ -1,0 +1,22 @@
+table {
+  text-align: center;
+  width: 90vw;
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+
+th {
+  padding: 1vw 2vw;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-style: solid;
+  border-width: thin;
+  border-color: #c0c0c0;
+}
+
+td {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 1vw 2vw;
+  border-style: solid;
+  border-width: thin;
+  border-color: #c0c0c0;
+}
