@@ -11,9 +11,10 @@
         <option value="<%= animal.id %>"><%= animal.name %></option>
         <% end %>
         <% end %>
-
       </select>
   </label>
+  <br>
+  <br>
   <label>
     Select an owner:
       <select id="owner" name="owner_id">
@@ -22,8 +23,12 @@
         <% end %>
       </select>
   </label>
+  <br>
+  <br>
   <label for="adoption_date">Adoption Date:</label>
   <input id="adoption_date" type="date" name="adoption_date" value="<%= @adoption.adoption_date %>"/>
+  <br>
+  <br>
   <input class="submit-button admit-button" type="submit" value="Edit adoption">
 </form>
 
