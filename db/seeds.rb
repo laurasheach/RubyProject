@@ -31,6 +31,24 @@ owner4 = Owner.new({
   })
 owner4.save()
 
+owner5 = Owner.new({
+  'full_name' => 'Florence Jones',
+  'address' => '5 New Street, Glasgow, G5 6IJ'
+  })
+owner5.save()
+
+owner6 = Owner.new({
+  'full_name' => 'Emily James',
+  'address' => '6 Mulberry Drive, Glasgow, G6 7KL'
+  })
+owner6.save()
+
+owner7 = Owner.new({
+  'full_name' => 'John Davies',
+  'address' => '7 North Street, Glasgow, G7 6KL'
+  })
+owner7.save()
+
 animal1 = Animal.new({
   'name' => 'Bert',
   'animal_type' => 'Dog',
@@ -70,7 +88,7 @@ animal4 = Animal.new({
   'breed' => 'Mediterranean Spur-thighed',
   'age' => 14,
   'admission_date' => '2019-02-28',
-  'adoption_status' => 'Available',
+  'adoption_status' => 'Unavailable',
   'animal_url' => '/images/scoot.jpg'
   })
 animal4.save()
@@ -97,6 +115,49 @@ animal6 = Animal.new({
   })
 animal6.save()
 
+animal7 = Animal.new({
+  'name' => 'Gizmo',
+  'animal_type' => 'Dog',
+  'breed' => 'Chihuahua',
+  'age' => 2,
+  'admission_date' => '2019-04-29',
+  'adoption_status' => 'Unavailable',
+  'animal_url' => '/images/gizmo.jpg'
+  })
+animal7.save()
+
+animal8 = Animal.new({
+  'name' => 'Bella',
+  'animal_type' => 'Dog',
+  'breed' => 'German Shepherd',
+  'age' => 9,
+  'admission_date' => '2019-03-19',
+  'adoption_status' => 'Unavailable',
+  'animal_url' => '/images/bella.jpg'
+  })
+animal8.save()
+
+animal9 = Animal.new({
+  'name' => 'Lucy',
+  'animal_type' => 'Dog',
+  'breed' => 'German Shepherd',
+  'age' => 5,
+  'admission_date' => '2019-04-03',
+  'adoption_status' => 'Available',
+  'animal_url' => '/images/lucy.jpg'
+  })
+animal9.save()
+
+animal10 = Animal.new({
+  'name' => 'Luna',
+  'animal_type' => 'Cat',
+  'breed' => 'Bombay',
+  'age' => 12,
+  'admission_date' => '2019-02-19',
+  'adoption_status' => 'Available',
+  'animal_url' => '/images/luna.jpg'
+  })
+animal10.save()
 
 adoption1 = Adoption.new({
   'owner_id' => owner1.id,
@@ -109,6 +170,18 @@ adoption2 = Adoption.new({
   'animal_id' => animal1.id
   })
 adoption2.save()
+
+adoption3 = Adoption.new({
+  'owner_id' => owner4.id,
+  'animal_id' => animal8.id
+  })
+adoption3.save()
+
+adoption4 = Adoption.new({
+  'owner_id' => owner1.id,
+  'animal_id' => animal4.id
+  })
+adoption4.save()
 
 binding.pry
 nil
