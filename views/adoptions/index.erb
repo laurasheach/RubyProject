@@ -8,6 +8,7 @@
     <th>Adoption id</th>
     <th>Owner Full Name</th>
     <th>Animal Name</th>
+    <th>Adoption Date</th>
     <th></th>
   </tr>
 
@@ -16,6 +17,7 @@
     <td><%= adoption.id %></td>
     <td><%= adoption.owner.full_name %></td>
     <td><%= adoption.animal.name %></td>
+    <td><%= adoption.adoption_date %></td>
     <td><a href="/adoptions/<%= adoption.id %>">Show Adoption</a></td>
   </tr>
   <% end %>

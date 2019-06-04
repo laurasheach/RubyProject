@@ -161,25 +161,29 @@ animal10.save()
 
 adoption1 = Adoption.new({
   'owner_id' => owner1.id,
-  'animal_id' => animal2.id
+  'animal_id' => animal2.id,
+  'adoption_date' => '2019-05-15'
   })
 adoption1.save()
 
 adoption2 = Adoption.new({
   'owner_id' => owner2.id,
-  'animal_id' => animal1.id
+  'animal_id' => animal1.id,
+  'adoption_date' => '2019-05-20'
   })
 adoption2.save()
 
 adoption3 = Adoption.new({
   'owner_id' => owner4.id,
-  'animal_id' => animal8.id
+  'animal_id' => animal8.id,
+  'adoption_date' => '2019-05-21'
   })
 adoption3.save()
 
 adoption4 = Adoption.new({
   'owner_id' => owner1.id,
-  'animal_id' => animal4.id
+  'animal_id' => animal4.id,
+  'adoption_date' => '2019-06-01'
   })
 adoption4.save()
 

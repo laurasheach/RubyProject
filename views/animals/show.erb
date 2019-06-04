@@ -2,7 +2,7 @@
 <br>
 
 <div class="grid">
-  <img class="animal-picture" src="<%= @animal.animal_url %>" height="250" alt="animal picture"/>
+  <img src="<%= @animal.animal_url %>" height="415" alt="animal picture"/>
   <div class="grid-information">
     <p>
       <strong>Animal id:</strong>
@@ -40,8 +40,16 @@
         <%= owner.full_name %>
       <% end %>
     </p>
+    <p><strong>Date Adopted:</strong></p>
+    <p>
+      <% for adoption in  @animal.animal_adoption_date %>
+        <%= adoption.adoption_date %>
+      <% end %>
+      </p>
   </div>
 </div>
+<br>
+<br>
 <br>
 <br>
 <div class="button-grid">

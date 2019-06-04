@@ -80,7 +80,8 @@ a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(192, 192, 192, 0.5);
+  /* background: rgba(192, 192, 192, 0.5); */
+  background-color: rgba(52, 35, 166, 0.75);
   height: 25vh;
   width: 25vw;
   margin: 10px;

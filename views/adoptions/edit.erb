@@ -7,11 +7,13 @@
     Select an animal:
       <select class="drop-down" id="animal" name="animal_id">
         <% for animal in @animals %>
+        <% if animal.adoption_status == "Available" %>
         <option value="<%= animal.id %>"><%= animal.name %></option>
         <% end %>
+        <% end %>
+
       </select>
   </label>
-
   <label>
     Select an owner:
       <select id="owner" name="owner_id">
@@ -20,6 +22,10 @@
         <% end %>
       </select>
   </label>
+  <label for="adoption_date"><strong>Adoption Date:</strong></label>
+  <input id="adoption_date" type="date" name="adoption_date" value="<%= @adoption.adoption_date %>"/>
   <input class="submit-button admit-button" type="submit" value="Edit adoption">
 </form>
+
+
 </div>
