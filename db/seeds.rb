@@ -140,7 +140,7 @@ animal8.save()
 animal9 = Animal.new({
   'name' => 'Lucy',
   'animal_type' => 'Dog',
-  'breed' => 'German Shepherd',
+  'breed' => 'Golden Retriever',
   'age' => 5,
   'admission_date' => '2019-04-03',
   'adoption_status' => 'Available',

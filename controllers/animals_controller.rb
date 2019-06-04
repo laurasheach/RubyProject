@@ -11,6 +11,20 @@ get '/animals' do
   erb (:"animals/index")
 end
 
+# Show a only the available animals
+
+get '/available-animals' do
+  @animals = Animal.all()
+  erb (:"animals/available")
+end
+
+# Show the animals which are still in training/vet care
+
+get '/unavailable-unadopted' do
+  @animals = Animal.all()
+  erb (:"animals/unavailable-unadopted")
+end
+
 # Show a form to admit a new animal
 
 get '/animals/new' do
