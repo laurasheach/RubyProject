@@ -23,7 +23,7 @@
     <option <%= "selected" if @animal.adoption_status == "Available" %> value="Available">Available</option>
   </select>
 
-  <label for="animal_url">Photo</label>
+  <label for="animal_url">Photo:</label>
   <input type="text" name="animal_url" value="<%= @animal.animal_url %>" src=""/>
 
   <input class="admit-button submit-button" type="submit" value="Update animal">

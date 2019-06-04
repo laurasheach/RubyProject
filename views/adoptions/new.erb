@@ -3,7 +3,7 @@
 <div class="main">
 <form action="/adoptions" method="post">
   <label>
-    <strong>Select an animal:</strong>
+    Select an animal:
       <select class="drop-down" id="animal" name="animal_id">
         <% for animal in @animals %>
         <% if animal.adoption_status == "Available" %>
@@ -14,14 +14,14 @@
   </label>
 
   <label>
-    <strong>Select an owner:</strong>
+    Select an owner:
       <select class="drop-down" id="owner" name="owner_id">
         <% for owner in @owners %>
         <option value="<%= owner.id %>"><%= owner.full_name %></option>
         <% end %>
       </select>
   </label>
-  <label for="adoption_date"><strong>Adoption Date:</strong></label>
+  <label for="adoption_date"><Adoption Date:</label>
   <input id="adoption_date" type="date" name="adoption_date"/>
   <input class="submit-button admit-button" type="submit" value="Add adoption">
 </form>

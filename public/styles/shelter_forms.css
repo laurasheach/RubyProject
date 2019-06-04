@@ -10,6 +10,18 @@
   font-size: 15px;
 }
 
+.form-owner {
+  display: inline-grid;
+  margin-top: 50px;
+  margin-left: 355px;
+  width: 60vw;
+  height: 10vh;
+  grid-template-columns: 10vw 30vw;
+  grid-template-rows: auto;
+  grid-gap: 15px 5px;
+  font-size: 15px;
+}
+
 .admit-button {
   grid-column: 2 / span 1;
 }

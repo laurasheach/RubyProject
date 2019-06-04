@@ -4,7 +4,7 @@
 <div class="main">
 <form action="/adoptions/<%= @adoption.id %>" method="post">
   <label>
-    Select an animal:
+  Select an animal:
       <select class="drop-down" id="animal" name="animal_id">
         <% for animal in @animals %>
         <% if animal.adoption_status == "Available" %>
@@ -22,7 +22,7 @@
         <% end %>
       </select>
   </label>
-  <label for="adoption_date"><strong>Adoption Date:</strong></label>
+  <label for="adoption_date">Adoption Date:</label>
   <input id="adoption_date" type="date" name="adoption_date" value="<%= @adoption.adoption_date %>"/>
   <input class="submit-button admit-button" type="submit" value="Edit adoption">
 </form>
