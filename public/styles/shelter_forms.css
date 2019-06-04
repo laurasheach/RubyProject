@@ -23,7 +23,7 @@
   colour: #000000;
   text-align: center;
   padding: 5px;
-  margin-top: 10vh;
+  margin-top: 10px;
 }
 
 .grid {
@@ -35,12 +35,6 @@
   grid-template-rows:auto;
   grid-gap: 15px 5px;
 }
-
-/* .animal-picture {
-  grid-column: 1;
-  grid-row: 1 / span 8;
-} */
-
 
 .button-grid {
   display: grid;
@@ -80,5 +74,4 @@
   grid-template-columns: 10vw 10vw 10vw;
   grid-template-rows:auto;
   grid-gap: 15px 5px;
-
 }
