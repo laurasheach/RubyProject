@@ -1,3 +1,6 @@
+<h1 class="main">Adoption summary:</h1>
+<br>
+
 <div class="grid-adoption">
 <p><strong>Owner Name:</strong></p>
 <p><%= @adoption.owner.full_name %></p>
@@ -8,14 +11,14 @@
 
 <div class="button-grid-adoption">
 <form action="/adoptions/<%= @adoption.id %>/edit" method="get">
-  <input type="submit" value="Edit Adoption">
+  <input class="submit-button" type="submit" value="Edit Adoption">
 </form>
 
 <form action="/adoptions/<%= @adoption.id %>/delete" method="post">
-  <input type="submit" value="Delete Adoption">
+  <input class="submit-button" type="submit" value="Delete Adoption">
 </form>
 
 <form action="/adoptions" method="get">
-  <input type="submit" value="Back to all Adoptions">
+  <input class="submit-button" type="submit" value="Back to all Adoptions">
 </form>
 </div>
