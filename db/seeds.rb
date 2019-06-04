@@ -75,6 +75,28 @@ animal4 = Animal.new({
   })
 animal4.save()
 
+animal5 = Animal.new({
+  'name' => 'Yuki',
+  'animal_type' => 'Cat',
+  'breed' => 'Long Hair British Blue',
+  'age' => 6,
+  'admission_date' => '2019-05-18',
+  'adoption_status' => 'Available',
+  'animal_url' => '/images/yuki.jpg'
+  })
+animal5.save()
+
+animal6 = Animal.new({
+  'name' => 'Daisy',
+  'animal_type' => 'Dog',
+  'breed' => 'English Cocker Spaniel',
+  'age' => 3,
+  'admission_date' => '2019-05-03',
+  'adoption_status' => 'Available',
+  'animal_url' => '/images/daisy.jpg'
+  })
+animal6.save()
+
 
 adoption1 = Adoption.new({
   'owner_id' => owner1.id,
