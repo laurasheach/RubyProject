@@ -1,6 +1,10 @@
-<p><strong>Name:</strong><%= @owner.full_name %></p>
-<p><strong>Address:</strong><%= @owner.address %></p>
-<p><strong>Animals Adopted:</strong>
+<div class="grid-owner">
+<p><strong>Name:</strong></p>
+<p><%= @owner.full_name %></p>
+<p><strong>Address:</strong></p>
+<p><%= @owner.address %></p>
+<p><strong>Animals Adopted:</strong></p>
+
   <ul>
     <% for animal in  @owner.animals %>
     <li>
@@ -8,8 +12,10 @@
     </li>
     <% end %>
   </ul>
-</p>
 
+</div>
+
+<div class="button-grid-adoption">
 <form action="/owners/<%= @owner.id %>/edit" method="get">
   <input type="submit" value="Edit Owner">
 </form>
@@ -21,3 +27,4 @@
 <form action="/owners" method="get">
   <input type="submit" value="Back to all Owners">
 </form>
+</div>

@@ -1,27 +1,55 @@
+<div class="grid">
+  <img class="animal-picture" src="<%= @animal.animal_url %>" height="250" alt="animal picture"/>
+  <div class="grid-information">
+    <p>
+      <strong>Animal id:</strong>
+    </p>
+    <p><%= @animal.id %></p>
+    <p>
+      <strong>Name:</strong>
+    </p>
+    <p><%= @animal.name %></p>
+    <p>
+      <strong>Animal Type:</strong>
+    </p>
+    <p><%= @animal.animal_type %></p>
+    <p>
+      <strong>Breed:</strong>
+    </p>
+    <p><%= @animal.breed %></p>
+    <p>
+      <strong>Age:</strong>
+    </p>
+    <p><%= @animal.age %></p>
+    <p>
+      <strong>Admission Date:</strong>
+    </p>
+    <p><%= @animal.admission_date %></p>
+    <p>
+      <strong>Availabilty:</strong>
+    </p>
+    <p><%= @animal.adoption_status %></p>
+    <p>
+      <strong>Adopted by:</strong>
+    </p>
+    <p>
+      <% for owner in  @animal.owners %>
+        <%= owner.full_name %>
+      <% end %>
+    </p>
+  </div>
+</div>
+<br>
+<div class="button-grid">
+  <form action="/animals/<%= @animal.id %>/edit" method="get">
+    <input type="submit" value="Edit Animal">
+  </form>
 
-<p><strong>Animal id:</strong><%= @animal.id %></p>
-<p><strong>Name:</strong><%= @animal.name %></p>
-<p><strong>Animal Type:</strong><%= @animal.animal_type %></p>
-<p><strong>Breed:</strong><%= @animal.breed %></p>
-<p><strong>Age:</strong><%= @animal.age %></p>
-<p><strong>Admission Date:</strong><%= @animal.admission_date %></p>
-<p><strong>Availabilty:</strong><%= @animal.adoption_status %></p>
-<p><strong>Adopted by:</strong>
-  <% for owner in  @animal.owners %>
-  <%= owner.full_name %>
-  <% end %>
-</p>
+  <form action="/animals/<%= @animal.id %>/delete" method="post">
+    <input type="submit" value="Delete Animal">
+  </form>
 
-<img src="<%= @animal.animal_url %>" height="250" alt="animal picture"/>
-
-<form action="/animals/<%= @animal.id %>/edit" method="get">
-  <input type="submit" value="Edit Animal">
-</form>
-
-<form action="/animals/<%= @animal.id %>/delete" method="post">
-  <input type="submit" value="Delete Animal">
-</form>
-
-<form action="/animals" method="get">
-  <input type="submit" value="Back to all Animals">
-</form>
+  <form action="/animals" method="get">
+    <input type="submit" value="Back to all Animals">
+  </form>
+</div>

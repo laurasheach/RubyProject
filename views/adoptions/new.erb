@@ -4,7 +4,7 @@
 <form action="/adoptions" method="post">
   <label>
     Select an animal:
-      <select id="animal" name="animal_id">
+      <select class="drop-down" id="animal" name="animal_id">
         <% for animal in @animals %>
         <% if animal.adoption_status == "Available" %>
         <option value="<%= animal.id %>"><%= animal.name %></option>
@@ -15,13 +15,13 @@
 
   <label>
     Select an owner:
-      <select id="owner" name="owner_id">
+      <select class="drop-down" id="owner" name="owner_id">
         <% for owner in @owners %>
         <option value="<%= owner.id %>"><%= owner.full_name %></option>
         <% end %>
       </select>
   </label>
-  <input type="submit" value="Add adoption">
+  <input class="adoption-button" type="submit" value="Add adoption">
 </form>
 
 </div>

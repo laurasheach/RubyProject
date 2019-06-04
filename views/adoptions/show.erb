@@ -1,6 +1,12 @@
-<p><strong>Owner Name:</strong><%= @adoption.owner.full_name %></p>
-<p><strong>Animal Name:</strong><%= @adoption.animal.name %></p>
+<div class="grid-adoption">
+<p><strong>Owner Name:</strong></p>
+<p><%= @adoption.owner.full_name %></p>
+<p><strong>Animal Name:</strong></p>
+<p><%= @adoption.animal.name %></p>
+</div>
+<br>
 
+<div class="button-grid-adoption">
 <form action="/adoptions/<%= @adoption.id %>/edit" method="get">
   <input type="submit" value="Edit Adoption">
 </form>
@@ -12,3 +18,4 @@
 <form action="/adoptions" method="get">
   <input type="submit" value="Back to all Adoptions">
 </form>
+</div>
