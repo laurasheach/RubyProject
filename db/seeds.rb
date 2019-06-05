@@ -110,7 +110,7 @@ animal6 = Animal.new({
   'breed' => 'English Cocker Spaniel',
   'age' => 3,
   'admission_date' => '2019-05-03',
-  'adoption_status' => 'Available',
+  'adoption_status' => 'Unavailable',
   'animal_url' => '/images/daisy.jpg'
   })
 animal6.save()

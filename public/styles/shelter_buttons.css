@@ -12,3 +12,40 @@
 .main-button:hover {
   background-color: #6B818C;
 }
+
+.admit-button {
+  grid-column: 2 / span 1;
+}
+
+.submit-button {
+  font-size: 15px;
+  background-color: #c0c0c0;
+  colour: #000000;
+  text-align: center;
+  padding: 5px;
+  margin-top: 10px;
+}
+
+.submit-button:hover {
+  background-color: #4D5D66;
+}
+
+.button-grid {
+  display: grid;
+  margin-left: 475px;
+  width: 60vw;
+  height: 5vh;
+  grid-template-columns: 10vw 10vw 10vw;
+  grid-template-rows:auto;
+  grid-gap: 15px 5px;
+}
+
+.button-grid-adoption {
+  display: grid;
+  margin-left: 525px;
+  width: 60vw;
+  height: 50vh;
+  grid-template-columns: 10vw 10vw 10vw;
+  grid-template-rows:auto;
+  grid-gap: 15px 5px;
+}
