@@ -37,8 +37,38 @@ The Shelter Manager is able to undertake the following tasks:
 
 ## Screenshots
 
-##### View All Animals
+#### View All Animals
 ![Animal List](screenshots/view_all_animals.png)
+
+#### Animal Summary
+![Animal Summary](screenshots/animal_summary.png)
+
+#### Admit A New Animal
+![Admit A New Animal](screenshots/admit_a_new_animal.png)
+
+#### Edit/Update An Animal
+![Edit/Update Animal](screenshots/update_animal.png)
+
+#### New Adoption
+![New Adoption](screenshots/new_adoption.png)
+
+#### All Adoptions
+![All Adoptions](screenshots/all_adoptions.png)
+
+#### All Owners & Potential Owners
+![All Owners & Potential Owners](screenshots/all_owners.png)
+
+#### Animal Marked as Unavailable on Adoption (Gary)
+![Animal Unavailable on Adoption](screenshots/animal_unavailable.png)
+
+#### Animal Marked Unavailable & Adoption Added to Summary
+![Adoption Added to Summary](screenshots/unavailable_animal_summary.png)
+
+#### Animals in Training/Vet Care
+![Animals in Training & Vet Care](screenshots/animals_in_training.png)
+
+#### Animals Available for Adoption
+![Animals Available](screenshots/available_animals.png)
 
 ## Installation
 
